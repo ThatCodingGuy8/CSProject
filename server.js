@@ -18,7 +18,7 @@ server.get("/", (req, res) => {
 })
 
 //Middleware
-server.use(express.static("public"))
+server.use(express.static('public'))
 
 //Server Initialization
 server.listen(HttpPort, () => {
