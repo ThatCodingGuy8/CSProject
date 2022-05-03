@@ -5,12 +5,10 @@
     Keep in mind that any code run here is run by the CLIENT, not the server!
 */
 
-function CreateParagraph(text, center) {
+function CreateParagraph(text, classes) {
     var Container = document.createElement("p") // Create an empty paragraph node
     var text = document.createTextNode(text) // Create a text node to put inside the p node
-    if (center) {
-        Container.className = "center" // Align the text to the center of the page if it needs to be centered
-    }
+    Container.className = classes // Allow the programmer (me) to insert any classes I wish to insert
     Container.appendChild(text) // Apply the text inside the paragraph element
     document.body.appendChild(Container) // Append the final built paragraph node into the document
 }
@@ -21,6 +19,6 @@ document.addEventListener("DOMContentLoaded", function (ev) {
 
     //Repeat 10 times
     for (i = 1; i < 10; i++) {
-        CreateParagraph("Hello World!", true) // Call the CreateParagraph function
+        CreateParagraph("Hello World!", "center white-text") // Call the CreateParagraph function
     }
 })

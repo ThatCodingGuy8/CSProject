@@ -17,7 +17,7 @@ const options = {
 server.get("/", (req, res) => {
     //Below gets the IP of the party initiating the GET request
     request("http://api.ipify.org/", {json: true}, (err, res, body) => {
-        console.log("[+] GET request from " + body)
+        console.log("[+] GET request from " + req.socket.remoteAddress)
     })
     res.sendFile("public/html/main.html", options); // Serve main html file, using options object as settings.
 })
