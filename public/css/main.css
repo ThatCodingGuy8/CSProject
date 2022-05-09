@@ -2,7 +2,9 @@
     color: rgb(255, 255, 255);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
+a:visited {
+    color:pink;
+}
 .center {
     text-align: center;
 }
